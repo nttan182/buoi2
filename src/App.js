@@ -1,20 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import {Hello, HelloPerson} from './component/Hello.js';
-import {Item, Menu, Header} from './component/Header.js'
-import {Hi, hiAll, hiYou} from './component/Hi.js';
-import Car from "./component/Car.js";       
-import Login from "./component/Login.js";
+import logo from "./logo.svg";
+import "./App.css";
+import { Outlet } from "react-router-dom";
+import { Header } from "./component/Header.js";
 
 function App() {
   return (
     <div className="App">
-    <Hello/>
-    <HelloPerson name={'Thuy An'}/>
-    <Header/>
-    <Hi/>
-    <Car />
-    <Login/>
+      <Header />
+      <div className="container">
+        <Outlet />
+      </div>
     </div>
   );
 }
